@@ -1,4 +1,4 @@
-package com.mysite.user;
+package com.mysite.sbb.user;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,16 +11,17 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class SiteUser {
+public class User_User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String userName;
+
     @Column(unique = true)
-    private String username;
+    private String phoneNumber;
 
     private String password;
 
-    @Column(unique = true)
-    private String email;
+    private boolean sex;
 }
